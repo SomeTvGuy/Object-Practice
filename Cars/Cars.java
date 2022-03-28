@@ -27,11 +27,37 @@ Write a short driver program to test your Car class with a short array of Cars (
 public class Cars{
     // intialize all the variables out here 
     String CarName, ModelName;
-    int year,milesDriven,fuelCapacity,fuelRemaining;
+    int Year,milesDriven,fuelCapacity,fuelRemaining;
     double MilesPerGallon;
-    public Cars(String CarName,String ModelName,int year,double MilesPerGallon,int milesDriven, int fuelCapacity, int fuelRemaining){
-         
+    // initializes the variables if defined
+    public Cars(String init_CarName,String init_ModelName,int init_year,double init_MilesPerGallon,int init_milesDriven, int init_fuelCapacity, int init_fuelRemaining){
+        CarName = init_CarName;
+        ModelName = init_ModelName;
+        Year = init_year;
+        MilesPerGallon = init_MilesPerGallon;
+        milesDriven = init_milesDriven;
+        fuelCapacity = init_fuelCapacity;
+        fuelRemaining = init_fuelRemaining; 
+    }
+    public void fillTank(double g){
+        if ( (g + fuelRemaining)> fuelCapacity){
+            fuelRemaining = fuelCapacity;
+        }
+    }
+    public void drive(double m){
+        // m is just a simplification of miles theoretciall, if you divide the amount of miles given in the input
+        // and divide that by the miles per gallon, the result of this minus the current fuel remaining should provide
+        // you the final fuel remaining,
+        // first things first, add the aount of miles to the miles driven
+        milesDriven += m;
+        double Gas_Used= m/ MilesPerGallon;
+        if (Gas_Used > 1){
+        fuelRemaining -= Gas_Used;
+        } 
+    }
 
+    public String getFuelRemaining(){
+        return "Fuel Remaining For "+CarName+": "+fuelRemaining;
     }
 
 }
