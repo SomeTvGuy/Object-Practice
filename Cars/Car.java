@@ -1,5 +1,3 @@
-import java.time.Year;
-
 /*
 Implement a class Car, which contains the fields (5 points):
 

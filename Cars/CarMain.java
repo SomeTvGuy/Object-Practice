@@ -1,4 +1,4 @@
-public class CarMain {
+public class CarMain{
     public static void main(String[] args){
     //     Car oldJunker = new Car("Ford", "Pinto", 1972, 17.5, 132480, 12, 8); // creates a new Car object
     // oldJunker.drive(5); // drives the Car 5 miles
@@ -13,6 +13,7 @@ public class CarMain {
     for (Car Thing: ArrayOfCars){
         System.out.println(Thing);
         Thing.drive(5);
+        Thing.fillTank(1);
         System.out.println(Thing);
     }
 }  
