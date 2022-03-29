@@ -59,7 +59,7 @@ public class Car{
         }
     }
     public String toString(){
-        return "Carname : "+CarName+"\nModelName: "+ModelName+"\nYear : "+Year+"\nMPG(Miles Per Gallon) : "+MilesPerGallon+"\nMiles On The Car : "+milesDriven +" miles"+"\nThis Car Can Hold Up To : "+fuelCapacity+" gallons"+"\nThis Car Has "+fuelRemaining + " gallons left in the tank";
+        return "Car Name : "+CarName+"\nModel Name: "+ModelName+"\nYear : "+Year+"\nMPG(Miles Per Gallon) : "+MilesPerGallon+"\nMiles On The Car : "+milesDriven +" miles"+"\nThis Car Can Hold Up To : "+fuelCapacity+" gallons"+"\nThis Car Has "+fuelRemaining + " gallons left in the tank";
     }
     public String getFuelRemaining(){
         return "Fuel Remaining For "+CarName+": "+fuelRemaining;
