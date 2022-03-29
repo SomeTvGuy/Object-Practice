@@ -1,3 +1,17 @@
+/*
+Mon, 28 Mar 2022
+Anthony Poole
+:Object Practice:
+Make an object class for cars and for frations
+in each folder with their repsecive names, lies the class for the object
+and the test file for each class
+:Fraction class notes:
+The only issue with this project was just the sheer volume in logic that it took to 
+implement the simplification of a fraction, how I did it was by continuing
+modulo division until it equal zero, the result before hadn represented the remainder
+if you take that and divide it by the nyumereator and divisor, you get a simplifies
+fraction  
+*/
 public class Fraction {
     int numerator,denominator;
     public Fraction(int n, int d){
@@ -69,13 +83,6 @@ public class Fraction {
             return numerator+"/"+denominator+ " equals "+ numerator;
         }
         return numerator+"/"+denominator;
-    }
-    public static void main(String[] args){
-        Fraction Lol= new Fraction(3,4);
-        Fraction Test1 = new Fraction(4,8);
-        System.out.println(Test1.Simplification());
-        Fraction Result = new Fraction(3,4).add(new Fraction(1,4));
-        System.out.println(Result);
     }
 
 
